@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kavling TA UPer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Tombol untuk toggle sidebar -->
+  <button id="toggle-sidebar" aria-label="Toggle sidebar">
+    &#9776;
+  </button>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="collapsed">
+      <h1>📍 Kavling TA UPer</h1>
+      <p>Silakan klik area pada peta untuk melihat detail lokasi TA Pemetaan mahasiswa Teknik Geologi Universitas Pertamina.</p>
+      <hr />
+      
+      <label for="filter-year">Filter Tahun Wisuda:</label>
+      <select id="filter-year">
+        <option value="all">Semua Tahun</option>
+      </select>
+
+      <hr />
+      <p>Data disusun berdasarkan informasi titik koordinat mahasiswa per lokasi penelitian.</p>
+      <footer>
+        <small>&copy; 2025 Teknik Geologi - Universitas Pertamina<br>
+          Dibuat oleh Abiyyu Daffa Revanzha - Teknik Geologi 2022
+
+        </small>
+      </footer>
+    </aside>
+
+    <!-- Peta utama -->
+    <main id="map"></main>
+  </div>
+
+  <!-- Logo UPer di kiri bawah -->
+  <div id="logo-footer">
+    <img src="images/logo_pertamina.png" alt="Logo Universitas Pertamina" />
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Script utama -->
+  <script src="script.js"></script>
+</body>
+</html>
