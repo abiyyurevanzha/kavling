@@ -1,4 +1,7 @@
 const map = L.map('map').setView([-7.5, 110], 6);
+document.getElementById('toggle-sidebar').addEventListener('click', function () {
+  document.getElementById('sidebar').classList.toggle('collapsed');
+});
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
