@@ -1,20 +1,20 @@
 /* Reset & container */
 body, html {
-  margin: 0; padding: 0; height: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container {
-  display: flex;
   height: 100vh;
-  overflow: hidden;
 }
 
 /* Sidebar */
 #sidebar {
   position: fixed;
   top: 0;
-  right: 0; /* geser ke kanan */
+  right: 0;
   height: 100vh;
   width: 300px;
   background: #f0f4f8;
@@ -22,30 +22,30 @@ body, html {
   box-sizing: border-box;
   overflow-y: auto;
   transition: right 0.3s ease;
-  border-left: 1px solid #ccc; /* ganti border jadi kiri */
+  border-left: 1px solid #ccc;
   z-index: 1000;
 }
 
 #sidebar.collapsed {
-  right: -300px; /* geser keluar layar ke kanan */
-  overflow: hidden;
+  right: -300px;
   padding: 0;
+  overflow: hidden;
   border: none;
 }
 
-
-/* Main map fills remaining space */
+/* Map */
 #map {
-  flex-grow: 1;
   height: 100%;
+  width: 100%;
+  z-index: 0;
 }
 
-
+/* Toggle button (hamburger) */
 #toggle-sidebar {
   position: fixed;
   top: 15px;
-  right: 15px; /* pindah ke kanan */
-  z-index: 1100; /* pastikan z-index lebih tinggi */
+  right: 15px;
+  z-index: 1100;
   background: #0077b6;
   border: none;
   color: white;
@@ -61,8 +61,7 @@ body, html {
   background: #005f86;
 }
 
-
-/* Label and select */
+/* Label and select for filter */
 label {
   font-weight: 600;
   font-size: 14px;
@@ -80,9 +79,22 @@ select {
   margin-bottom: 15px;
 }
 
+/* Footer */
 footer {
   margin-top: 30px;
   font-size: 12px;
   color: #777;
   text-align: center;
+}
+
+/* Responsive handling if needed */
+@media (max-width: 600px) {
+  #sidebar {
+    width: 100%;
+    border-left: none;
+  }
+
+  #sidebar.collapsed {
+    right: -100%;
+  }
 }
